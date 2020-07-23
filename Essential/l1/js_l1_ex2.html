@@ -3,6 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <title>js_l1_ex2</title>
+
+    <script type="text/javascript">
+      var x = 6;
+      var y = 15;
+      var z = 4;
+      x += y - x++ * z;
+      document.write(x + "<hr/>");
+
+      z = --x - y * 5;
+      document.write(z + "<hr/>");
+
+      y /= x + (5 % z);
+      document.write(y + "<hr/>");
+
+      z = x++ + y * 5;
+      document.write(z + "<hr/>");
+
+      x = y - x++ * z;
+      document.write(x + "<hr/>");
+    </script>
   </head>
   <body>
     <h1>js_l1_ex2</h1>
@@ -10,11 +30,11 @@
       Создайте переменные x=6, y=15, z=4. Выполните и отобразите результат для:
     </p>
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>x += y - x++ * z;</li>
+      <li>z = --x - y * 5;</li>
+      <li>y /= x + 5 % z;</li>
+      <li>z = x++ + y * 5;</li>
+      <li>x = y - x++ * z;</li>
     </ul>
   </body>
 </html>
