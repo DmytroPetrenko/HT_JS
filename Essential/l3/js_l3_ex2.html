@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>js_l3_ex2</title>
+    <script>
+      let arr = [2, 5, 55, 12, 37];
+
+      document.write("Max: " + Math.max(...arr) + "<br>");
+      document.write("Min: " + Math.min(...arr) + "<br>");
+      let sum = 0;
+      let counter = 0;
+      let odd_arr = [];
+      arr.forEach(element => {
+         sum += element;
+         counter++;
+         if (element % 2 != 0) {
+             odd_arr += element.toString() + " ";
+         }
+      });
+      document.write("Sum: " + sum + "<br>");
+      document.write("Avg: " + sum/counter + "<br>");
+      document.write("Odd: " + odd_arr);
+    </script>
+  </head>
+  <body>
+    <pre>
+        arr = [2, 5, 55, 12, 37]
+Создать и заполнить массив. Вывести наибольшее значение, наименьшее, 
+        общую сумму элементов, сред aрифметическое и все нечетные значения.</pre
+    >
+  </body>
+</html>
