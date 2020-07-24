@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>js_l2_ex4</title>
+    <style>
+      .date {
+        text-align: center;
+        line-height: 0.5;
+      }
+    </style>
+    <script>
+      for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 10; index++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      document.write("__________________________<br>");
+
+      for (let index = 0; index < 10; index++) {
+        for (let i = 0; i < 10 - index; i++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      document.write("__________________________<br>");
+
+      var text = "";
+      for (let index = 0; index < 26; index++) {
+        for (let i = 0; i < 30 - (index * 30) / 26; i++) {
+          text += "*";
+        }
+        text += "<br>";
+      }
+      document.write('<p class="date">' + text + "</p>");
+      document.write("__________________________<br>");
+
+      text = "";
+
+      for (let index = 26; index > 0; index--) {
+        for (let i = 30; i > 0 + (index * 30) / 26; i--) {
+          text += "*";
+        }
+        text += "<br>";
+      }
+      for (let index = 0; index < 26; index++) {
+        for (let i = 0; i < 30 - (index * 30) / 26; i++) {
+          text += "*";
+        }
+        text += "<br>";
+      }
+      document.write('<p class="date">' + text + "</p>");
+      document.write("__________________________<br>");
+    </script>
+  </head>
+  <body>
+    <p>Нарисуйте:</p>
+    <ul>
+      <li>прямоугольник</li>
+      <li>прямоугольный треугольний</li>
+      <li>равносторонний треугольник</li>
+      <li>ромб</li>
+    </ul>
+  </body>
+</html>
