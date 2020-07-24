@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>js_l4_ex2</title>
+    <script>
+           function f1(num) {
+             function primality(num) {
+                if (num < 2) {
+                    return false;
+                }
+                for(let i = 2; i < num; i++) {
+                    if(num % i === 0) return false;
+                }
+                return true;
+             }
+
+             function div(num) {
+                 if (num % 2 == 0 || num % 3 == 0 || num % 5 == 0 || num % 6 == 0 || num % 9 == 0) {
+                     return true;
+                 }
+                 return false;
+             }
+
+             return (num < 0 ? "отрицательное" : "положительное") + "<br>" + (primality(num) == true ? "простое" : "НЕ простое" + "<br>" + (div(num) == true ? "делится" : "НЕ делится"));
+           }
+           document.write(f1(-7));
+    </script>
+  </head>
+  <body>
+    <pre>
+            Напишите ф-цию, которая будет принимать число и определять:
+            1. Положительное/отрицательное
+            2. Простое?
+            3. Делится ли без остатка на 2, 3, 5, 6, 9
+        </pre
+    >
+  </body>
+</html>
