@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>js_l5_ex1</title>
+    <script>
+      var mydocument = {
+        header: "Zagolovok",
+        body: "Telo",
+        footer: "Futer",
+        date: "Data",
+
+        extansion: {
+          header: "ZagolovokE",
+          body: "TeloE",
+          footer: "FuterE",
+          date: "dataE",
+        },
+      };
+
+      function lookAtMe(obj) {
+        for (let key in obj) {
+          let value = obj[key];
+
+          if (typeof value == "object") {
+            // работаем рекурсивно
+            lookAtMe();
+          }
+          // делаем то что хотим с ключём и значением
+          document.write(value + " ");
+
+          // определяем объект
+          
+        }
+      }
+
+      lookAtMe(mydocument);
+    </script>
+  </head>
+  <body>
+    <pre>
+            Создать объект "Документ", в котором определить свойства "Заголовок, Тело, Футер, Дата".
+            Создать в объекте вложеный объект - "Приложение". Создать в объекте "Приложение", вложеные
+            объекты, "Заголовок, Тело, Футер, Дата". Создать методы для заполнения и отображения документа.
+        </pre
+    >
+  </body>
+</html>
