@@ -11,10 +11,10 @@
         date: "Data",
 
         extansion: {
-          header: "ZagolovokExt",
-          body: "TeloExt",
-          footer: "FuterExt",
-          date: "dataExt",
+          header: { text: "ZagolovokExt" },
+          body: { text: "TeloExt" },
+          footer: { text: "FuterExt" },
+          date: { text: "dataExt" },
         },
       };
 
@@ -25,9 +25,10 @@
           if (typeof value == "object") {
             // работаем рекурсивно
             lookAtMe(value);
-            break;
           }
-          document.write(value + " ");
+          if (value != "[object Object]") {
+            document.write(value + " ");
+          }
         }
       }
 
