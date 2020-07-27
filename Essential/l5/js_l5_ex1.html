@@ -11,10 +11,10 @@
         date: "Data",
 
         extansion: {
-          header: "ZagolovokE",
-          body: "TeloE",
-          footer: "FuterE",
-          date: "dataE",
+          header: "ZagolovokExt",
+          body: "TeloExt",
+          footer: "FuterExt",
+          date: "dataExt",
         },
       };
 
@@ -24,17 +24,25 @@
 
           if (typeof value == "object") {
             // работаем рекурсивно
-            lookAtMe();
+            lookAtMe(value);
+            break;
           }
-          // делаем то что хотим с ключём и значением
           document.write(value + " ");
-
-          // определяем объект
-          
         }
       }
 
-      lookAtMe(mydocument);
+      function writeIn() {
+        if (document.myForm.headerF.value != "") {
+          mydocument.header = document.myForm.headerF.value;
+        }
+        if (document.myForm.bodyF.value != "") {
+          mydocument.body = document.myForm.bodyF.value;
+        }
+      }
+
+      function writeOut() {
+        lookAtMe(mydocument);
+      }
     </script>
   </head>
   <body>
@@ -44,5 +52,26 @@
             объекты, "Заголовок, Тело, Футер, Дата". Создать методы для заполнения и отображения документа.
         </pre
     >
+
+    <form name="myForm">
+      <p>Header: <input type="text" name="headerF" /></p>
+      <p>Body: <input type="text" name="bodyF" /></p>
+      <p>
+        <input
+          type="button"
+          name="formBtnZap"
+          value="Zapolnit`"
+          onclick="writeIn();"
+        />
+      </p>
+      <p>
+        <input
+          type="button"
+          name="formBtnVuv"
+          value="Vuvesti"
+          onclick="writeOut()"
+        />
+      </p>
+    </form>
   </body>
 </html>
